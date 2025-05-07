@@ -1,0 +1,29 @@
+*--for Database--*
+create database attendance_management_system
+use attendance_management_system
+
+*--for Faculty Table--*
+CREATE TABLE faculty (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    faculty_code VARCHAR(50) NOT NULL,
+    branch VARCHAR(100),
+    faculty_name VARCHAR(100),
+    course VARCHAR(100),
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+*--for Student Table--*
+CREATE TABLE students (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    age INT,
+    contact BIGINT,
+    gender VARCHAR(50),
+    doj DATE,
+    course VARCHAR(100),
+    address VARCHAR(255),
+    branch VARCHAR(100),
+    dob DATE,
+    batch_time VARCHAR(100)
+);
