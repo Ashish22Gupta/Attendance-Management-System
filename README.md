@@ -1,60 +1,84 @@
-# Attendance-Management-System
-Technology: Html, Css, Js, Java, MySQL
-An Attendance Management System developed using Java (JSP, Servlet), MySQL, and Apache NetBeans IDE 21. This application facilitates efficient tracking and management of student attendance records.
+# 📋 Attendance Management System
+### Java (JSP/Servlet) + MySQL Web Application
 
-# Features
-User Authentication: Secure login for administrators and faculty members.
-Student Management: Add, update, and delete student records.
-Attendance Tracking: Mark and view attendance for students.
-Reporting: Generate attendance reports for individual students or entire classes.
-Database Integration: Seamless integration with MySQL for data storage.
+> ⚠️ **DISCLAIMER:** This is a **personal learning and portfolio project**. It is a web-based attendance tracking system built with Java (JSP/Servlet) and MySQL for educational purposes. All student data, credentials, and attendance records in the bundled SQL file are **fictional sample data**. This project is **NOT** an official attendance system of any institution, and it is not hardened for production use without security review.
 
-# Prerequisites
-Before setting up the project, ensure the following software are installed on your system:
-Apache NetBeans IDE 21
-XAMPP Control Panel (includes Apache and MySQL)
-MySQL JDBC Driver
+A full-stack attendance management system built with Java (JSP, Servlet), MySQL, and Apache NetBeans 21. It enables administrators and faculty to authenticate, manage student records, mark and view attendance, and generate class-wide or individual reports — all through a browser-based interface served by Tomcat.
 
-# Setup Instructions
-Follow these steps to set up and run the project:
-1. Clone the Repository
-Copy
-Edit
-Alternatively, download the ZIP file and extract it to your desired location.
+![Version](https://img.shields.io/badge/Version-1.0.0-ED8B00)
+![Status](https://img.shields.io/badge/Status-Portfolio%20Project-F4B400)
+![Stack](https://img.shields.io/badge/Stack-JSP%20%7C%20Servlet%20%7C%20MySQL-2D6A4F)
 
-2. Start XAMPP Services
-Open the XAMPP Control Panel.
-Start the Apache and MySQL services.
+---
 
-3. Set Up the Database
-Open your browser and navigate to http://localhost/phpmyadmin.
-Click on the Databases tab.
-Create a new database named attendance management system.
-Click on the Import tab.
-Choose the attendance management system.sql file located in the DATABASE folder of the project.
-Click Go to import the database schema and data.
+## 🔗 Links
 
-4. Configure Apache NetBeans IDE
-Launch Apache NetBeans IDE 21.
-Go to File > Open Project.
-Navigate to the extracted project folder and open it.
-Right-click on the project in the Projects pane and select Properties.
-Under Libraries, add the MySQL JDBC Driver:
-Click Add JAR/Folder.
-Navigate to the location of the downloaded MySQL JDBC Driver JAR file and add it.
-Under Run, ensure the server is set to Apache Tomcat (configure if not already set).
+- **Source Code:** [github.com/Ashish22Gupta/Attendance-Management-System](https://github.com/Ashish22Gupta/Attendance-Management-System)
 
-5. Build and Run the Project
-Right-click on the project and select Clean and Build.
-After the build is successful, right-click on the project and select Run.
-The application should open in your default browser at http://localhost:8080/Attendance Management System.
+> 💡 *No live demo — requires a local Java + MySQL + Tomcat environment. Follow the setup steps below.*
 
-# Usage
-Login: Use the default credentials provided in the README or as set in the database.
-Dashboard: Navigate through the dashboard to manage students and attendance records.
-Reports: Generate and export attendance reports as needed.
+---
 
-# Troubleshooting
-Port Conflicts: Ensure that ports 80 (Apache) and 3306 (MySQL) are not being used by other applications.
-Database Connection Issues: Verify that the database name, username, and password in the project's database configuration match your MySQL settings.
-Missing JDBC Driver: Ensure the MySQL JDBC Driver is correctly added to the project's libraries.
+## ✨ Implemented Features
+
+### 🔐 User Authentication
+- **Secure Login** — Administrators and faculty members log in with credentials stored in the database.
+- **Session Management** — Authenticated sessions are tracked via the servlet container, restricting dashboard access to logged-in users only.
+
+### 🎓 Student Management
+- **Add Students** — Register new students with identifying details.
+- **Update Students** — Edit existing student records.
+- **Delete Students** — Remove student entries from the system.
+
+### ✅ Attendance Tracking
+- **Mark Attendance** — Record attendance for students on a given day/period.
+- **View Attendance** — Browse historical attendance data by student or class.
+
+### 📊 Reporting
+- **Individual Reports** — Generate attendance reports for a single student.
+- **Class-Wide Reports** — Produce aggregate reports across an entire class.
+- **Exportable Output** — Reports can be exported for offline record-keeping.
+
+### 🗄️ Database Integration
+- **MySQL Backend** — All data (users, students, attendance records) is persisted in MySQL.
+- **Bundled SQL Schema** — A ready-to-import `.sql` file is included in the `DATABASE` folder for instant setup.
+
+### 🎨 Frontend
+- **HTML5 / CSS3 / JavaScript** — Clean, form-based UI for all management operations.
+- **JSP Server-Side Rendering** — Dynamic pages rendered via JSP on Apache Tomcat.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Java (JSP / Servlet)** | Server-side rendering and request handling |
+| **MySQL** | Relational database for users, students, and attendance |
+| **MySQL JDBC Driver** | Java–MySQL connectivity |
+| **HTML5 / CSS3** | UI structure and styling |
+| **JavaScript** | Client-side interactivity and validation |
+| **Apache NetBeans IDE 21** | Development environment |
+| **Apache Tomcat** | Servlet container / application server |
+
+---
+
+## 📁 Project Structure
+
+```text
+Attendance-Management-System/
+├── DATABASE/
+│   └── attendance management system.sql    # MySQL schema + sample data
+│
+├── src/
+│   └── java/                               # Servlets & backend logic
+│
+├── web/ (or WebContent/)
+│   ├── *.jsp                               # JSP pages (login, dashboard, reports)
+│   ├── css/                                # Stylesheets
+│   └── js/                                 # Client-side scripts
+│
+├── WEB-INF/
+│   └── web.xml                             # Servlet mappings & config
+│
+└── nbproject/                              # NetBeans project metadata
